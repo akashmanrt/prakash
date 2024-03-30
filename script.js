@@ -11,5 +11,5 @@ form.addEventListener("input", () => {
 
 function refreshCaptcha() {
     const captchaImg = document.getElementById("captchaImg");
-    captchaImg.src = "captcha.php?" + new Date().getTime();
+    captchaImg.src = "micro.php?" + new Date().getTime();
 }
