@@ -1,14 +1,20 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>CAPTCHA Example</title>
+	<title>Addition and Subtraction CAPTCHA</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<div id="captcha-container">
-		<canvas id="captcha"></canvas>
+		<div id="captcha-question"></div>
 		<input type="text" id="captcha-input" placeholder="Enter CAPTCHA code">
-		<a href="https://www.youtube.com/watch?v=4EWIPKhQH1c"><button id="submit-btn" onclick="checkCaptcha()">Submit</button></a>
+		<button id="submit-btn" onclick="checkCaptcha()">Submit</button>
+		<p id="error-message" class="hidden">Incorrect CAPTCHA code, please try again.</p>
+	</div>
+	<div id="next-page" class="hidden">
+		<h1>Next Page</h1>
+		<p>You have successfully entered the CAPTCHA code.</p>
+	</div>
 	<script src="script.js"></script>
 </body>
 </html>
