@@ -14,15 +14,35 @@ body {
 	margin-bottom: 1em;
 }
 
-#error-message {
-	color: #FF0000;
-	margin-top: 1em;
-}
-
 .hidden {
 	display: none;
 }
 
-#next-page {
-	margin-top: 2em;
+#error-message,
+#success-message {
+	position: relative;
+	margin-top: 1em;
+	padding: 1em;
+	background-color: #FF0000;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+
+#error-message .arrow-up,
+#success-message .arrow-down {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+#error-message .arrow-up {
+	top: -10px;
+	border-bottom: 10px solid #FF0000;
+}
+
+#success-message .arrow-down {
+	bottom: -10px;
+	border-top: 10px solid #FF0000;
 }
