@@ -2,7 +2,7 @@ const captchaQuestion = document.getElementById('captcha-question');
 const userInput = document.getElementById('captcha-input');
 const submitBtn = document.getElementById('submit-btn');
 const errorMessage = document.getElementById('error-message');
-const nextPage = document.getElementById('next-page');
+const successMessage = document.getElementById('success-message');
 
 function generateCaptcha() {
 	const num1 = Math.floor(Math.random() * 10) + 1;
@@ -22,14 +22,12 @@ function generateCaptcha() {
 
 function checkCaptcha() {
 	if (parseInt(userInput.value) === parseInt(captchaQuestion.dataset.answer)) {
+		successMessage.classList.remove('hidden');
 		errorMessage.classList.add('hidden');
-		nextPage.classList.remove('hidden');
 	} else {
 		errorMessage.classList.remove('hidden');
-		nextPage.classList.add('hidden');
+		successMessage.classList.add('hidden');
 	}
 }
-
-generateCaptcha();
 
 generateCaptcha();
