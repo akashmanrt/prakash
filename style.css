@@ -9,13 +9,9 @@ body {
 	align-items: center;
 }
 
-#captcha {
-	height: 80%;
-	width: 80%;
+#captcha-question {
 	font-size: 30px;
-	letter-spacing: 3px;
-	margin: auto;
-	display: block;
+	margin-bottom: 1em;
 }
 
 #error-message {
