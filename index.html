@@ -18,10 +18,18 @@
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" required>
             </div>
-            <div class="form-group">
-                <label for="captcha">Enter the CAPTCHA code:</label>
+            <div class="form-group"><div id="recaptcha">
+                <script src="https://www.google.com/recaptcha/api.js?render=sitekey"></script>
+            </div>    <label for="captcha">Enter the CAPTCHA code:</label>
                 <input type="text" name="captcha" id="captcha" required>
                 <img src="captcha.php" alt="CAPTCHA" id="captchaImg">
+                <script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('site-key', {action: 'submit_form'}).then(function(token) {
+            // You can use the token in your server-side code to verify the user.
+        });
+    });
+</script>
                 <button type="button" onclick="refreshCaptcha()">Refresh CAPTCHA</button>
             </div>
             <input type="submit" value="Submit" disabled>
