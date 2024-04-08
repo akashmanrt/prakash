@@ -1,9 +1,32 @@
-.container {
-    width: 300px;
-    margin: auto;
-    text-align: center;
+body {
+	background-color: #232331;
+	font-family: 'Roboto', sans-serif;
 }
 
-.form-group {
-    margin: 10px;
+#captcha-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#captcha {
+	height: 80%;
+	width: 80%;
+	font-size: 30px;
+	letter-spacing: 3px;
+	margin: auto;
+	display: block;
+}
+
+#error-message {
+	color: #FF0000;
+	margin-top: 1em;
+}
+
+.hidden {
+	display: none;
+}
+
+#next-page {
+	margin-top: 2em;
 }
