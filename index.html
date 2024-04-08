@@ -9,11 +9,14 @@
 		<div id="captcha-question"></div>
 		<input type="text" id="captcha-input" placeholder="Enter CAPTCHA code">
 		<button id="submit-btn" onclick="checkCaptcha()">Submit</button>
-		<p id="error-message" class="hidden">Incorrect CAPTCHA code, please try again.</p>
-	</div>
-	<div id="next-page" class="hidden">
-		<h1>Next Page</h1>
-		<p>You have successfully entered the CAPTCHA code.</p>
+		<div id="error-message" class="hidden">
+			<p>Incorrect CAPTCHA code, please try again.</p>
+			<div class="arrow-up"></div>
+		</div>
+		<div id="success-message" class="hidden">
+			<p>Correct CAPTCHA code!</p>
+			<div class="arrow-down"></div>
+		</div>
 	</div>
 	<script src="script.js"></script>
 </body>
